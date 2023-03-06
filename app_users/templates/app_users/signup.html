@@ -1,0 +1,98 @@
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content padding-y">
+
+<!-- ============================ COMPONENT REGISTER   ================================= -->
+	<div class="card mx-auto" style="max-width:520px; margin-top:40px;">
+      <article class="card-body">
+		<header class="mb-4"><h4 class="card-title">Sign up</h4></header>
+		<form action="{% url 'SignUpView' %}" method="POST">
+
+			{% csrf_token %}
+
+
+
+				<div class="form-row">
+					<div class="col form-group">
+						<label for="inputState">Name</label>
+						{{user_creation_form.first_name}}
+						{{user_creation_form.first_name.errors}}
+					</div> <!-- form-group end.// -->
+					
+				</div> <!-- form-row end.// -->
+				<div class="form-group">
+					<label for="inputState">Email</label>
+					{{user_creation_form.email}}
+					{{user_creation_form.email.errors}}
+					<!--input type="email" class="form-control" placeholder=""-->
+					<small class="form-text text-muted">We'll never share your email with anyone else.</small>
+				</div> <!-- form-group end.// -->
+				
+					<div class="form-group col-md-6">
+					  <label>Gender:</label>
+					  {{appuserform.gender}}
+					  {{appuserform.gender.errors}}
+					  <!--select id="inputState" class="form-control">
+					    <option> Choose Gender...</option>
+					      <option>Female</option>
+					      <option>Male</option>
+					      <option>Other</option>
+					  </select-->
+					</div>
+
+				</div> <!-- form-group end.// -->
+				<div class="form-row">
+					<div class="form-group col-md-6">
+					  <label for="inputState">Street Address:</label>
+					  {{appuserform.address}}
+					  {{appuserform.address.errors}}
+					  <!---input type="text" class="form-control"-->
+					</div> <!-- form-group end.// -->
+					 <!-- form-group end.// -->
+				</div> <!-- form-row.// -->
+				<div class="form-row">
+					<div class="form-group col-md-6">
+					  <label for="inputState">City:</label>
+					  {{appuserform.city}}
+					  {{appuserform.city.errors}}
+					  <!---input type="text" class="form-control"-->
+					</div> <!-- form-group end.// -->
+					 <!-- form-group end.// -->
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+					  <label for="inputState">Zipcode:</label>
+					  {{appuserform.zipcode}}
+					  {{appuserform.zipcode.errors}}
+					  <!---input type="text" class="form-control"-->
+					</div> <!-- form-group end.// -->
+					 <!-- form-group end.// -->
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputState">Create password</label>
+						{{user_creation_form.password1}}
+						{{user_creation_form.password1.errors}}
+					    <!--input class="form-control" type="password"-->
+					</div> <!-- form-group end.// --> 
+					<div class="form-group col-md-6">
+						<label>Repeat password</label>
+						{{user_creation_form.password2}}
+						{{user_creation_form.password2.errors}}
+					    <input class="form-control" type="password">
+					</div> <!-- form-group end.// -->  
+				</div>
+			    <div class="form-group">
+			        <input type="submit" value="Sign-Up" class="btn btn-primary btn-block"> Register  </button>
+			    </div> <!-- form-group// -->      
+			    <div class="form-group"> 
+		            <label class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" checked=""> <div class="custom-control-label"> I am agree with <a href="#">terms and contitions</a>  </div> </label>
+		        </div> <!-- form-group end.// -->           
+			</form>
+		</article><!-- card-body.// -->
+    </div> <!-- card .// -->
+    <p class="text-center mt-4">Have an account? <a href="">Log In</a></p>
+    <br><br>
+<!-- ============================ COMPONENT REGISTER  END.// ================================= -->
+
+
+</section>

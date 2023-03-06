@@ -1,0 +1,31 @@
+body{
+	font-family: 'Asap Condensed', sans-serif;
+	font-family: 'Rampart One', cursive;
+	font-family: 'Varela Round', sans-serif;
+}
+
+:root{
+	--seafoam-blue:#B4CCFD;
+	--pastel-green:#34DCDC;
+	--seafoam-green:#1DCDD6;
+	--pastel-pink:#FDB3D3;
+	--white:#fff;
+	--black:#000;
+	--yellow:#FDFD96;
+	--peach:#ADDFAD;
+	--red: #fa3434;
+	--primary: #3167eb;
+    --secondary: #545454;
+    --success: #00b517;
+    --info: #17a2b8;
+    --warning: #ff9017;
+    --danger: #fa3434;
+    --light: #e4e4e4;
+    --dark: #212529;
+
+}
+
+.example{
+	color:var(--seafoam-blue);
+
+}
